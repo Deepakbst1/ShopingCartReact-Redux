@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import Nav from './components/Nav/Nav.js'
 import ProductList from './components/ProductList/Productlist.js';
 import Filter from './components/Filter/Filter.js'
 import BarLoader from "react-spinners/BarLoader";
 import { Provider } from 'react-redux'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleFilter } from './components/Redux/Toggle.js' 
 import store from './components/Redux/Store.js'
 function App() {
 
