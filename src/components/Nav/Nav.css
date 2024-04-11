@@ -1,0 +1,125 @@
+.Nav {
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    padding: 1rem 8rem;
+    position: relative; /* Ensure the .Nav element is positioned relatively */
+    background-color: rgb(243, 238, 243);
+    
+}
+.Nav> :nth-child(1){
+    font-size: 1.8rem;
+    position: relative;
+    color: rgb(243, 28, 64); 
+    animation: glow 1s infinite alternate;
+}
+
+.Nav::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(243, 92, 228, 0.74); /* Border color */
+    border-radius: px; /* Adjust border radius as needed */
+    pointer-events: none; /* Ensure the border does not interfere with mouse events */
+    animation: glowBorder 2s infinite alternate; /* Apply glow animation to the border */
+}
+
+@keyframes glowBorder {
+    0% {
+        box-shadow: 0px 0px 10px rgba(234, 102, 248, 0.74);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgba(241, 83, 252, 0.74);
+    }
+}
+
+.Nav > :nth-child(1) {
+    font-size: 1.7rem;
+    position: relative;
+    color: rgb(243, 28, 64);
+}
+
+.Nav > :nth-child(1)::before,
+.Nav > :nth-child(1)::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    color: transparent;
+    text-shadow: 0 0 10px pink;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Nav > :nth-child(1):hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.NFC {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.NFC:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+@media (max-width: 1500px) and (min-width:920px) {
+    .Nav {
+        padding: 1rem 4rem;
+    }
+
+    .Nav > :nth-child(1) {
+        font-size: 1.5rem;
+    }
+
+    .NFC {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) and (min-width:510px) {
+    .Nav {
+        padding: 1rem 2rem;
+    }
+
+    .Nav > :nth-child(1) {
+        font-size: 1.3rem;
+    }
+
+    .NFC {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 510px) and (min-width:310px) {
+    .Nav {
+        padding: 1rem 1rem;
+    }
+
+    .Nav > :nth-child(1) {
+        font-size: 1.1rem;
+    }
+
+    .NFC {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,125 @@
+.blur-background {
+    filter: blur(15px); 
+}
+.Filter{
+    display: none;
+    background-color: var(--white);
+    border: 1px solid var(--sec);
+    flex-direction: column;
+    width: 30vw;/* Add a class to blur the background */
+    .blur-background {
+        filter: blur(6px); /* Adjust the blur intensity as needed */
+    }
+    
+    /* Other CSS styles remain the same */
+    .Filter {
+        display: none;
+        background-color: var(--white);
+        border: 1px solid var(--sec);
+        flex-direction: column;
+        width: 30vw;
+        z-index: 1;
+        gap: 1rem;
+        padding: 1rem;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    /* Media queries remain the same */
+    
+    z-index: 1;
+    gap: 1rem;
+    padding: 1rem;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.FD{
+display: flex;
+}
+.FC{
+    display: flex;
+    justify-content: space-between;
+}
+.FC > :nth-child(2){
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+.Categorycon{
+    display: flex;
+}
+.Categorycon> :nth-child(1){
+    width: 100%;
+    border: 1px solid var(--sec);
+    padding: 0.3rem 0.5rem;
+}
+.Ratingcon{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.Ratingcon> :nth-child(2){
+    width: 100%;
+    border: 1px solid var(--sec);
+    padding: 0.3rem 0.5rem;
+}
+.Filter button{
+    background-color: var(--accent);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+}
+.Filter button:hover{
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.InputRange{
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: column;
+}
+.rangevalues{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 1500px) and (min-width:920px){
+ .Filter{
+    width: 40vw;
+ }
+
+}
+@media (max-width: 992px) and (min-width:510px){
+    .Filter{
+        width: 55vw;
+     }
+     .Filter p{
+        font-size: 0.9rem;
+     }
+     .Filter select{
+        font-size: 0.8rem;
+     }
+     .Filter button{
+        font-size: 0.75rem;
+     }
+}
+@media (max-width: 510px) and (min-width:310px){
+    .Filter{
+        width: 90vw;
+     }
+     .Filter p{
+        font-size: 0.82rem;
+     }
+     .Filter select{
+        font-size: 0.7rem;
+     }
+     .Filter button{
+        font-size: 0.7rem;
+     }
+
+}
